@@ -1,0 +1,3 @@
+---
+alive_root_dir: /data/www/alive/html
+alive_check: "{{alive_root_dir}}/alive"

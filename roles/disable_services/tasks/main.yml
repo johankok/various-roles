@@ -1,0 +1,12 @@
+---
+- name: Stop services
+  service: name={{item}} state=stopped
+  with_items: "{{disable_services}}"
+  ignore_errors: true
+  become: true
+
+- name: Disable services
+  service: name={{item}} enabled=no
+  with_items: "{{disable_services}}"
+  ignore_errors: true
+  become: true

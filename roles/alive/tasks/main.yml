@@ -1,0 +1,9 @@
+---
+- name: Create directory
+  file: name={{alive_root_dir}} state=directory
+
+- name: Place index.html
+  copy: src=index.html dest={{alive_root_dir}}/index.html
+
+- name: Place alive
+  copy: src=alive dest={{alive_check}}
